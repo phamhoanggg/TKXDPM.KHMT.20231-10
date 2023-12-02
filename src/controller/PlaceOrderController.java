@@ -19,6 +19,10 @@ import views.screen.popup.PopupScreen;
  * This class controls the flow of place order usecase in our AIMS project
  * @author nguyenlm
  */
+// datacoupling with Cart
+// datacoupling with Order
+// datacoupling with Invoice
+// stampcoupling with Order
 public class PlaceOrderController extends BaseController{
 
     /**
@@ -30,6 +34,7 @@ public class PlaceOrderController extends BaseController{
      * This method checks the avalibility of product when user click PlaceOrder button
      * @throws SQLException
      */
+    // use Cart.getCart().checkAvailabilityOfProduct 
     public void placeOrder() throws SQLException{
         Cart.getCart().checkAvailabilityOfProduct();
     }
@@ -39,10 +44,15 @@ public class PlaceOrderController extends BaseController{
      * @return Order
      * @throws SQLException
      */
+    // use Cart.getCart().getListMedia()
+    // use cartMedia.getMedia()
+    // use cartMedia.getQuantity()
+    // use cartMedia.getPrice()
     public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {
             CartMedia cartMedia = (CartMedia) object;
+            // datacoupling OrderMedia and CartMedia
             OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(), 
                                                    cartMedia.getQuantity(), 
                                                    cartMedia.getPrice());    
@@ -56,6 +66,7 @@ public class PlaceOrderController extends BaseController{
      * @param order
      * @return Invoice
      */
+    // use Invoice in entity.Invoice
     public Invoice createInvoice(Order order) {
         return new Invoice(order);
     }
@@ -103,6 +114,8 @@ public class PlaceOrderController extends BaseController{
      * @param order
      * @return shippingFee
      */
+    // use order.getAmount()
+    // only order.getAmount() is used
     public int calculateShippingFee(Order order){
         Random rand = new Random();
         int fees = (int)( ( (rand.nextFloat()*10)/100 ) * order.getAmount() );

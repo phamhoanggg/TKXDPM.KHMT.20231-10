@@ -4,6 +4,8 @@ import entity.cart.Cart;
 import entity.cart.CartMedia;
 import entity.media.Media;
 
+// no data coupling
+// no stamp coupling
 public class User {
     
     private int id;

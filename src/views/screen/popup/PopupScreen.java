@@ -14,7 +14,8 @@ import javafx.util.Duration;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
 
-
+// datacoupling with CONFIGS
+// datacoupling with BaseScreenHandler
 public class PopupScreen extends BaseScreenHandler{
     
 
@@ -24,7 +25,7 @@ public class PopupScreen extends BaseScreenHandler{
     @FXML
     Label message;
 
-    
+    // use Configs.POPUP_PATH
     public PopupScreen(Stage stage) throws IOException{
         super(stage, Configs.POPUP_PATH);
     }
@@ -37,6 +38,7 @@ public class PopupScreen extends BaseScreenHandler{
         return popup;
     }
 
+    // use Configs.IMG_PATH
     public static void success(String message) throws IOException{
         popup(message, Configs.IMAGE_PATH + "/" + "tickgreen.png", true).show(true);
     }

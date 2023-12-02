@@ -12,6 +12,8 @@ import javafx.util.Duration;
 import utils.Configs;
 import views.screen.home.*;
 
+// data coupling with Configs
+// no stampcoupling
 public class App extends Application {
 
 	@FXML
@@ -22,6 +24,7 @@ public class App extends Application {
 		try {
 
 			// initialize the scene
+			// use Configs.SPLASH ... 
 			StackPane root = (StackPane) FXMLLoader.load(getClass().getResource(Configs.SPLASH_SCREEN_PATH));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);

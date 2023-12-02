@@ -26,8 +26,15 @@ import views.screen.BaseScreenHandler;
 import views.screen.popup.PopupScreen;
 import views.screen.shipping.ShippingScreenHandler;
 
+//data coupling with Configs
+//data coupling with Utils
+//data coupling with ShippingScreenHandle
+//data coupling with BaseScreenHandler
+////data coupling with PopupScreen
+// no stampcoupling
 public class CartScreenHandler extends BaseScreenHandler {
 
+	// use Utils.getLogger
 	private static Logger LOGGER = Utils.getLogger(CartScreenHandler.class.getName());
 
 	@FXML
@@ -89,10 +96,13 @@ public class CartScreenHandler extends BaseScreenHandler {
 		return labelSubtotal;
 	}
 
+	// use BaseScreenController
 	public ViewCartController getBController(){
 		return (ViewCartController) super.getBController();
 	}
 
+	// use BaseScreenController
+	// use ViewCartController.checkAvailabilityOfProduct()
 	public void requestToViewCart(BaseScreenHandler prevScreen) throws SQLException {
 		setPreviousScreen(prevScreen);
 		setScreenTitle("Cart Screen");
@@ -101,6 +111,7 @@ public class CartScreenHandler extends BaseScreenHandler {
 		show();
 	}
 
+	// use BaseController.getListCartMedia.size()
 	public void requestToPlaceOrder() throws SQLException, IOException {
 		try {
 			// create placeOrderController and process the order
@@ -119,6 +130,7 @@ public class CartScreenHandler extends BaseScreenHandler {
 			Order order = placeOrderController.createOrder();
 
 			// display shipping form
+			// use ShippingScreenHandler Function
 			ShippingScreenHandler ShippingScreenHandler = new ShippingScreenHandler(this.stage, Configs.SHIPPING_SCREEN_PATH, order);
 			ShippingScreenHandler.setPreviousScreen(this);
 			ShippingScreenHandler.setHomeScreenHandler(homeScreenHandler);
@@ -138,6 +150,7 @@ public class CartScreenHandler extends BaseScreenHandler {
 	}
 
 	void updateCartAmount(){
+		// use Configs.PERCENT_VAT
 		// calculate subtotal and amount
 		int subtotal = getBController().getCartSubtotal();
 		int vat = (int)((Configs.PERCENT_VAT/100)*subtotal);
@@ -145,6 +158,7 @@ public class CartScreenHandler extends BaseScreenHandler {
 		LOGGER.info("amount" + amount);
 
 		// update subtotal and amount of Cart
+		// use Utils.getCurrencyFormat
 		labelSubtotal.setText(Utils.getCurrencyFormat(subtotal));
 		labelVAT.setText(Utils.getCurrencyFormat(vat));
 		labelAmount.setText(Utils.getCurrencyFormat(amount));
@@ -162,10 +176,12 @@ public class CartScreenHandler extends BaseScreenHandler {
 
 				// display the attribute of vboxCart media
 				CartMedia cartMedia = (CartMedia) cm;
+				// use new MediaHandler
 				MediaHandler mediaCartScreen = new MediaHandler(Configs.CART_MEDIA_PATH, this);
 				mediaCartScreen.setCartMedia(cartMedia);
 
 				// add spinner
+				// use mediaCartScreen.getContent()
 				vboxCart.getChildren().add(mediaCartScreen.getContent());
 			}
 			// calculate subtotal and amount

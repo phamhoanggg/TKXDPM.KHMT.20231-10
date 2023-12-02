@@ -19,6 +19,10 @@ import utils.Configs;
 import views.screen.BaseScreenHandler;
 import views.screen.popup.PopupScreen;
 
+// datacoupling with Configs
+// datacoupling with PaymentController
+// datacoupling with BaseScreenHandler
+
 public class PaymentScreenHandler extends BaseScreenHandler {
 
 	@FXML
@@ -29,6 +33,7 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 
 	private Invoice invoice;
 
+	// import amount , contents but not used ? 
 	public PaymentScreenHandler(Stage stage, String screenPath, int amount, String contents) throws IOException {
 		super(stage, screenPath);
 	}

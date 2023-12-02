@@ -35,6 +35,14 @@ import views.screen.BaseScreenHandler;
 import views.screen.cart.CartScreenHandler;
 
 
+// datacoupling with Configs
+// datacoupling with Utils
+// datacoupling with CartScreenHandler
+// datacoupling with controller.BaseController;
+// datacoupling with controller.HomeController;
+// datacoupling with controller.ViewCartController;
+// datacoupling with entity.cart.Cart;
+// datacoupling with entity.media.Media;
 public class HomeScreenHandler extends BaseScreenHandler implements Initializable{
 
     public static Logger LOGGER = Utils.getLogger(HomeScreenHandler.class.getName());
@@ -73,24 +81,31 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         return this.numMediaInCart;
     }
 
+    // use BaseControler
     public HomeController getBController() {
         return (HomeController) super.getBController();
     }
 
     @Override
     public void show() {
+        // use Cart.getCart().getListMedia()
         numMediaInCart.setText(String.valueOf(Cart.getCart().getListMedia().size()) + " media");
         super.show();
     }
 
+    // import arg0, arg1 but not used ? 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        // use BaseController
+        // use HomeController
         setBController(new HomeController());
         try{
             List medium = getBController().getAllMedia();
             this.homeItems = new ArrayList<>();
             for (Object object : medium) {
                 Media media = (Media)object;
+                // use new MediaHandler
+                // use Configs.HOME_MEDIA_PATH
                 MediaHandler m1 = new MediaHandler(Configs.HOME_MEDIA_PATH, media, this);
                 this.homeItems.add(m1);
             }
@@ -108,6 +123,8 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             CartScreenHandler cartScreen;
             try {
                 LOGGER.info("User clicked to view cart");
+                // use CartScreen functions
+                // use Configs.CART_SCREEN_PATH
                 cartScreen = new CartScreenHandler(this.stage, Configs.CART_SCREEN_PATH);
                 cartScreen.setHomeScreenHandler(this);
                 cartScreen.setBController(new ViewCartController());
@@ -124,6 +141,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
 
     public void setImage(){
         // fix image path caused by fxml
+        // use Configs.IMG_PATH 
         File file1 = new File(Configs.IMAGE_PATH + "/" + "Logo.png");
         Image img1 = new Image(file1.toURI().toString());
         aimsImage.setImage(img1);
@@ -171,6 +189,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             List filteredItems = new ArrayList<>();
             homeItems.forEach(me -> {
                 MediaHandler media = (MediaHandler) me;
+                // use MediaHandle.getMedia ... 
                 if (media.getMedia().getTitle().toLowerCase().startsWith(text.toLowerCase())){
                     filteredItems.add(media);
                 }

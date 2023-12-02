@@ -5,6 +5,9 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
+
+// no data coupling
+// no stamp coupling
 public class CD extends Media {
 
     String artist;

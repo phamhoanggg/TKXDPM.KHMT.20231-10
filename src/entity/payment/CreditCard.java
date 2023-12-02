@@ -2,6 +2,8 @@ package entity.payment;
 
 import java.sql.Timestamp;
 
+// no data coupling
+// no stamp coupling
 public class CreditCard {
 	private String cardCode;
 	private String owner;

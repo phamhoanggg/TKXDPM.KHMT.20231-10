@@ -14,6 +14,8 @@ import javafx.scene.layout.VBox;
 import utils.Utils;
 import views.screen.FXMLScreenHandler;
 
+//  no data coupling 
+// no stamp coupling
 public class MediaInvoiceScreenHandler extends FXMLScreenHandler{
 
     @FXML

@@ -21,6 +21,10 @@ import subsystem.InterbankSubsystem;
  * @author hieud
  *
  */
+// datacoupling with CreditCard
+// datacoupling with InterbankInterface
+// datacoupling with InterbankSubSystem
+// datacoupling with Cart
 public class PaymentController extends BaseController {
 
 	/**
@@ -59,6 +63,7 @@ public class PaymentController extends BaseController {
 			year = Integer.parseInt(strs[1]);
 			if (month < 1 || month > 12 || year < Calendar.getInstance().get(Calendar.YEAR) % 100 || year > 100) {
 				throw new InvalidCardException();
+				// not data 
 			}
 			expirationDate = strs[0] + strs[1];
 
@@ -86,9 +91,12 @@ public class PaymentController extends BaseController {
 		Map<String, String> result = new Hashtable<String, String>();
 		result.put("RESULT", "PAYMENT FAILED!");
 		try {
+			// use CreditCart Constructor 
 			this.card = new CreditCard(cardNumber, cardHolderName, Integer.parseInt(securityCode),
 					getExpirationDate(expirationDate));
 
+			// use InterbankSubsytem Constructor
+			// use interbank.payOrder()
 			this.interbank = new InterbankSubsystem();
 			PaymentTransaction transaction = interbank.payOrder(card, amount, contents);
 
@@ -101,6 +109,8 @@ public class PaymentController extends BaseController {
 	}
 
 	public void emptyCart(){
+
+		// use Cart.getCart().emptyCart()
         Cart.getCart().emptyCart();
     }
 }

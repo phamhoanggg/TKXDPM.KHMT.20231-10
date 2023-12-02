@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
+// no data coupling
+// no stampcoupling 
 public class DVD extends Media {
 
     String discType;

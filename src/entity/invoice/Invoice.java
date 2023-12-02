@@ -2,6 +2,7 @@ package entity.invoice;
 
 import entity.order.Order;
 
+// no data coupling
 public class Invoice {
 
     private Order order;

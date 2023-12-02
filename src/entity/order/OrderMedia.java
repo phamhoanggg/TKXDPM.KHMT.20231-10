@@ -2,6 +2,9 @@ package entity.order;
 
 import entity.media.Media;
 
+
+// no data coupling
+// no stamp coupling
 public class OrderMedia {
     
     private Media media;

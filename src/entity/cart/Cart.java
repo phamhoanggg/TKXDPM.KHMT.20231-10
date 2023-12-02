@@ -7,11 +7,14 @@ import java.util.List;
 import common.exception.MediaNotAvailableException;
 import entity.media.Media;
 
+// datacoupling with CartMedia
+// stampcoupling with Media
 public class Cart {
     
     private List<CartMedia> lstCartMedia;
     private static Cart cartInstance;
 
+    // use new Cart func 
     public static Cart getCart(){
         if(cartInstance == null) cartInstance = new Cart();
         return cartInstance;
@@ -37,6 +40,7 @@ public class Cart {
         lstCartMedia.clear();
     }
 
+    // use getQuantity() in class CartMedia
     public int getTotalMedia(){
         int total = 0;
         for (Object obj : lstCartMedia) {
@@ -46,6 +50,7 @@ public class Cart {
         return total;
     }
 
+    // use getPrice and getQuantity in cartMedia
     public int calSubtotal(){
         int total = 0;
         for (Object obj : lstCartMedia) {
@@ -66,6 +71,7 @@ public class Cart {
         if (!allAvai) throw new MediaNotAvailableException("Some media not available");
     }
 
+    // only media.getId is used ? 
     public CartMedia checkMediaInCart(Media media){
         for (CartMedia cartMedia : lstCartMedia) {
             if (cartMedia.getMedia().getId() == media.getId()) return cartMedia;

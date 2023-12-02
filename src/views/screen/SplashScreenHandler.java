@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+// no data coupling
+// no stamp coupling
 public class SplashScreenHandler implements Initializable {
 
     @FXML

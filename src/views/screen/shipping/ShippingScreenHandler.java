@@ -24,6 +24,15 @@ import views.screen.BaseScreenHandler;
 import views.screen.invoice.InvoiceScreenHandler;
 import views.screen.popup.PopupScreen;
 
+//data coupling with Configs
+// data coupling with Invoice
+// data coupling with Order
+// data coupling with BaseScreenHandler
+// data coupling with InvoiceScreenHandler
+// data coupling with PopupScreen
+
+
+
 public class ShippingScreenHandler extends BaseScreenHandler implements Initializable {
 
 	@FXML

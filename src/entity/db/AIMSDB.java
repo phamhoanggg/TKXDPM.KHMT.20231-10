@@ -8,6 +8,8 @@ import java.util.logging.Logger;
 import java.sql.Connection;
 import utils.*;
 
+// no datacoupling
+
 public class AIMSDB {
 
 	private static Logger LOGGER = Utils.getLogger(Connection.class.getName());

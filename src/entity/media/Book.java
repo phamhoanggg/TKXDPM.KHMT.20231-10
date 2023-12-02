@@ -8,6 +8,8 @@ import java.util.List;
 
 import entity.db.AIMSDB;
 
+// no datacoupling
+// no stampcoupling
 public class Book extends Media {
 
     String author;

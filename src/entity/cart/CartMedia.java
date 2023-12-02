@@ -2,6 +2,8 @@ package entity.cart;
 
 import entity.media.Media;
 
+// no datacoupling
+// no stampcoupling 
 public class CartMedia {
     
     private Media media;
@@ -12,6 +14,7 @@ public class CartMedia {
 
     }
 
+    // import cart but not used ? 
     public CartMedia(Media media, Cart cart, int quantity, int price) {
         this.media = media;
         this.quantity = quantity;

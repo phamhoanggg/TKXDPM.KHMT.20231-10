@@ -10,6 +10,8 @@ import entity.media.Media;
  * This class controls the flow of events in homescreen
  * @author nguyenlm
  */
+
+//datacoupling with Media
 public class HomeController extends BaseController{
 
 
@@ -18,6 +20,7 @@ public class HomeController extends BaseController{
      * @return List[Media]
      * @throws SQLException
      */
+    // use Media().getAllMedia();
     public List getAllMedia() throws SQLException{
         return new Media().getAllMedia();
     }

@@ -8,6 +8,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
+// no data coupling
+// no stampcoupling
 public class FXMLScreenHandler {
 
 	protected FXMLLoader loader;

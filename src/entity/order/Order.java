@@ -6,6 +6,8 @@ import java.util.List;
 
 import utils.Configs;
 
+// data coupling with ultis.Configs
+// no stampcoupling
 public class Order {
     
     private int shippingFees;
@@ -58,6 +60,7 @@ public class Order {
             OrderMedia om = (OrderMedia) object;
             amount += om.getPrice();
         }
+        // use Configs.PERCENT_VAT
         return (int) (amount + (Configs.PERCENT_VAT/100)*amount);
     }
 

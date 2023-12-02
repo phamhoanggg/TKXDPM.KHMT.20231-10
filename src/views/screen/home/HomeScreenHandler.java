@@ -172,14 +172,14 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             homeItems.forEach(me -> {
                 MediaHandler media = (MediaHandler) me;
                 if (media.getMedia().getTitle().toLowerCase().startsWith(text.toLowerCase())){
-                    filteredItems.add(media);
+                    filteredItems.add(media);	// Content coupling
                 }
             });
 
             // fill out the home with filted media as category
             addMediaHome(filteredItems);
         });
-        menuButton.getItems().add(position, menuItem);
+        menuButton.getItems().add(position, menuItem);	// Content coupling
     }
 
     

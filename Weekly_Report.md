@@ -35,12 +35,12 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  - Nhiệm vụ 1...
+  - Content coupling
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/2
   - Specific implementation details:
-    - Chi tiết công việc
+    - Find and mark all methods that have content coupling issues
 
 </details>
 

@@ -164,6 +164,7 @@ public class CartScreenHandler extends BaseScreenHandler {
 		labelAmount.setText(Utils.getCurrencyFormat(amount));
 	}
 	
+	// Content coupling: modify value of mediaCartScreen
 	private void displayCartWithMediaAvailability(){
 		// clear all old cartMedia
 		vboxCart.getChildren().clear();

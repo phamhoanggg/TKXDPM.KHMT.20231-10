@@ -44,10 +44,13 @@ public class PlaceOrderController extends BaseController{
      * @return Order
      * @throws SQLException
      */
+
     // use Cart.getCart().getListMedia()
     // use cartMedia.getMedia()
     // use cartMedia.getQuantity()
     // use cartMedia.getPrice()
+ 
+    // Content coupling: modify order's data
     public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {

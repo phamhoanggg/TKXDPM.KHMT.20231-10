@@ -48,7 +48,7 @@ public class API {
 	}
 
 	int var;
-
+	// Control couping
 	public static String post(String url, String data
 //			, String token
 	) throws IOException {

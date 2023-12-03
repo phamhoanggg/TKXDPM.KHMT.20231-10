@@ -29,7 +29,7 @@ public class PopupScreen extends BaseScreenHandler{
     public PopupScreen(Stage stage) throws IOException{
         super(stage, Configs.POPUP_PATH);
     }
-
+    // Control couping
     private static PopupScreen popup(String message, String imagepath, Boolean undecorated) throws IOException{
         PopupScreen popup = new PopupScreen(new Stage());
         if (undecorated) popup.stage.initStyle(StageStyle.UNDECORATED);

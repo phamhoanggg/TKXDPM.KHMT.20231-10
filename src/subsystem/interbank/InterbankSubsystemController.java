@@ -69,7 +69,7 @@ public class InterbankSubsystemController {
 
 		return makePaymentTransaction(response);
 	}
-
+	// Control couping
 	private PaymentTransaction makePaymentTransaction(MyMap response) {
 		if (response == null)
 			return null;

@@ -21,12 +21,12 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  - Nhiệm vụ 1...
+  -Stamp and Data coupling 
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/1
   - Specific implementation details:
-    - Chi tiết công việc
+    - Find and mark all stamp and data coupling in this application 
 
 </details>
 

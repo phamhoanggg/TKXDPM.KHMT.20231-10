@@ -63,12 +63,12 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  - Nhiệm vụ 1...
+  - Common coupling
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
-  - Specific implementation details:
-    - Chi tiết công việc
+  - Pull Request(s): 
+  - Specific implementation details: https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/4
+    - Find and comment methods that have common coupling
 
 </details>
 

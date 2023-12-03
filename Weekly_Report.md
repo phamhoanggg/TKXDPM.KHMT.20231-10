@@ -49,12 +49,12 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  - Nhiệm vụ 1...
+  - control coupling
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/3
   - Specific implementation details:
-    - Chi tiết công việc
+    - Tìm và comment control coupling
 
 </details>
 

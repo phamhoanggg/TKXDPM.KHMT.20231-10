@@ -4,7 +4,7 @@ import entity.cart.Cart;
 import entity.cart.CartMedia;
 import entity.media.Media;
 
-public class User {
+public class User { // Logical Cohesion ở các method get, set
     
     private int id;
     private String name;

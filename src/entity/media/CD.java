@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-public class CD extends Media {
+public class CD extends Media { // Logical Cohesion ở các method get, set
 
     String artist;
     String recordLabel;

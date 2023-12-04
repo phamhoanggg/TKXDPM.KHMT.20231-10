@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-public class DVD extends Media {
+public class DVD extends Media { // Logical Cohesion ở các method get, set
 
     String discType;
     String director;

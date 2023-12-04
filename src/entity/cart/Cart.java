@@ -36,7 +36,7 @@ public class Cart {
     public void emptyCart(){
         lstCartMedia.clear();
     }
-
+    // Logical Cohesion
     public int getTotalMedia(){
         int total = 0;
         for (Object obj : lstCartMedia) {
@@ -45,7 +45,7 @@ public class Cart {
         }
         return total;
     }
-
+    // Logical Cohesion
     public int calSubtotal(){
         int total = 0;
         for (Object obj : lstCartMedia) {

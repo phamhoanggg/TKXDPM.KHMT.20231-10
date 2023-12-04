@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import views.screen.home.HomeScreenHandler;
 
-public class BaseScreenHandler extends FXMLScreenHandler {
+public class BaseScreenHandler extends FXMLScreenHandler { // Logical Cohesion ở các method get, set
 
 	private Scene scene;
 	private BaseScreenHandler prev;

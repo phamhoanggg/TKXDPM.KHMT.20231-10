@@ -7,7 +7,7 @@ package common.exception;;
  * @author nguyenlm
  */
 public class ProcessInvoiceException extends AimsException {
-
+	// Coincidental cohesion
 	private static final long serialVersionUID = 1091337136123906298L;
 
 	public ProcessInvoiceException() {

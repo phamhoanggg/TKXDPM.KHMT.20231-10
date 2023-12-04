@@ -36,11 +36,11 @@ public class PopupScreen extends BaseScreenHandler{
         popup.setImage(imagepath);
         return popup;
     }
-
+    // Logical Cohesion
     public static void success(String message) throws IOException{
         popup(message, Configs.IMAGE_PATH + "/" + "tickgreen.png", true).show(true);
     }
-
+    // Logical Cohesion
     public static void error(String message) throws IOException{
         popup(message, Configs.IMAGE_PATH + "/" + "tickerror.png", false).show(false);
     }

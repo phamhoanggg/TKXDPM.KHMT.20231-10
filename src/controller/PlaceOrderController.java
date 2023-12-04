@@ -51,6 +51,7 @@ public class PlaceOrderController extends BaseController{
     // use cartMedia.getPrice()
  
     // Content coupling: modify order's data
+    // Logical cohension
     public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {

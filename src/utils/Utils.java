@@ -15,6 +15,8 @@ import java.util.logging.Logger;
  */
 // no data coupling
 // no stamp coupling
+
+// Coincidental cohension
 public class Utils {
 
 	public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");

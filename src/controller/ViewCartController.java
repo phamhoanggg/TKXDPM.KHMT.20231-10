@@ -11,12 +11,14 @@ import entity.cart.CartMedia;
  * This class controls the flow of events when users view the Cart
  * @author nguyenlm
  */
+// datacoupling with Cart
 public class ViewCartController extends BaseController{
     
     /**
      * This method checks the available products in Cart
      * @throws SQLException
      */
+    // use Cart.getCart().checkAvailabilityOfProduct();
     public void checkAvailabilityOfProduct() throws SQLException{
         Cart.getCart().checkAvailabilityOfProduct();
     }
@@ -25,6 +27,7 @@ public class ViewCartController extends BaseController{
      * This method calculates the cart subtotal
      * @return subtotal
      */
+    // use Cart.getCart().calSubtotal();
     public int getCartSubtotal(){
         int subtotal = Cart.getCart().calSubtotal();
         return subtotal;

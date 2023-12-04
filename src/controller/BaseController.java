@@ -17,6 +17,8 @@ public class BaseController {
      * @param media
      * @return CartMedia or null
      */
+    // datacoupling with Cart
+    // use Cart.getCart().checkMediaInCart ...
     public CartMedia checkMediaInCart(Media media){
         return Cart.getCart().checkMediaInCart(media);
     }
@@ -25,6 +27,8 @@ public class BaseController {
      * This method gets the list of items in cart
      * @return List[CartMedia]
      */
+    //datacoupling with cart
+    // use Cart.getCart().getListMedia();
     public List getListCartMedia(){
         return Cart.getCart().getListMedia();
     }

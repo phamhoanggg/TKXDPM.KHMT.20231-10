@@ -14,6 +14,8 @@ import subsystem.interbank.InterbankSubsystemController;
  * @author hieud
  *
  */
+// data coupling with InterbankSubsystemController
+// no stamp coupling
 public class InterbankSubsystem implements InterbankInterface {
 
 	/**
@@ -25,6 +27,7 @@ public class InterbankSubsystem implements InterbankInterface {
 	 * Initializes a newly created {@code InterbankSubsystem} object so that it
 	 * represents an Interbank subsystem.
 	 */
+	// use new InterbankSubsystemController();
 	public InterbankSubsystem() {
 		String str = new String();
 		this.ctrl = new InterbankSubsystemController();
@@ -43,6 +46,7 @@ public class InterbankSubsystem implements InterbankInterface {
 	 * @see InterbankInterface#refund(entity.payment.CreditCard, int,
 	 *      java.lang.String)
 	 */
+	// use ctrl.refund (card, amount,  contents)
 	public PaymentTransaction refund(CreditCard card, int amount, String contents) {
 		PaymentTransaction transaction = ctrl.refund(card, amount, contents);
 		return transaction;

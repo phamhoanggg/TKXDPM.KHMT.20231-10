@@ -10,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import views.screen.home.HomeScreenHandler;
 
+// no datacoupling
+// no stampcoupling
 public class BaseScreenHandler extends FXMLScreenHandler { // Logical Cohesion ở các method get, set
 
 	private Scene scene;

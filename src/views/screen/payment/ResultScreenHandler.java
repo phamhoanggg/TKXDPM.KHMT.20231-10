@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import views.screen.BaseScreenHandler;
 
+// data coupling with HomeScreenHandler
 public class ResultScreenHandler extends BaseScreenHandler {
 
 	private String result;

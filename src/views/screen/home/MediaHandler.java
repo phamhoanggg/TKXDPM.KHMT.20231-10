@@ -21,6 +21,12 @@ import views.screen.FXMLScreenHandler;
 import views.screen.home.HomeScreenHandler;
 import views.screen.popup.PopupScreen;
 
+//datacoupling with Utils
+//datacoupling with HomeScreenHandler
+//datacoupling with Cart
+//datacoupling with CartMedia
+//datacoupling with Media
+// no stamp coupling
 public class MediaHandler extends FXMLScreenHandler{
 
     @FXML
@@ -41,10 +47,11 @@ public class MediaHandler extends FXMLScreenHandler{
     @FXML
     protected Button addToCartBtn;
 
+    // use Utils.getLogger ()
     private static Logger LOGGER = Utils.getLogger(MediaHandler.class.getName());
     private Media media;
     private HomeScreenHandler home;
-
+    // Control couping
     public MediaHandler(String screenPath, Media media, HomeScreenHandler home) throws SQLException, IOException{
         super(screenPath);
         this.media = media;
@@ -52,20 +59,27 @@ public class MediaHandler extends FXMLScreenHandler{
         addToCartBtn.setOnMouseClicked(event -> {
             try {
                 if (spinnerChangeNumber.getValue() > media.getQuantity()) throw new MediaNotAvailableException();
+                // use Cart.getCarrt()
                 Cart cart = Cart.getCart();
                 // if media already in cart then we will increase the quantity by 1 instead of create the new cartMedia
+                // use CartMedia.setQuantity()
+                // use HomeScreenHandler.checkMediaInCart
                 CartMedia mediaInCart = home.getBController().checkMediaInCart(media);
                 if (mediaInCart != null) {
                     mediaInCart.setQuantity(mediaInCart.getQuantity() + 1);
                 }else{
+                    // use media.getPrice()
                     CartMedia cartMedia = new CartMedia(media, cart, spinnerChangeNumber.getValue(), media.getPrice());
                     cart.getListMedia().add(cartMedia);
                     LOGGER.info("Added " + cartMedia.getQuantity() + " " + media.getTitle() + " to cart");
                 }
 
                 // subtract the quantity and redisplay
+                // use media.setQuantity and media.getQuantity
                 media.setQuantity(media.getQuantity() - spinnerChangeNumber.getValue());
                 mediaAvail.setText(String.valueOf(media.getQuantity()));
+                // use HomeScreenHandler.getNumMediaCartLabel()
+                // use Cart.getTotalMedia()
                 home.getNumMediaCartLabel().setText(String.valueOf(cart.getTotalMedia() + " media"));
                 PopupScreen.success("The media " + media.getTitle() + " added to Cart");
             } catch (MediaNotAvailableException exp) {
@@ -97,6 +111,8 @@ public class MediaHandler extends FXMLScreenHandler{
         mediaImage.setFitWidth(152);
         mediaImage.setImage(image);
 
+        // use media.getTilte()
+        // use Utils
         mediaTitle.setText(media.getTitle());
         mediaPrice.setText(Utils.getCurrencyFormat(media.getPrice()));
         mediaAvail.setText(Integer.toString(media.getQuantity()));

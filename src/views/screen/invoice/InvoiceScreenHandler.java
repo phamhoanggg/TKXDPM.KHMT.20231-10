@@ -21,6 +21,15 @@ import utils.Utils;
 import views.screen.BaseScreenHandler;
 import views.screen.payment.PaymentScreenHandler;
 
+// data coupling with Configs
+// data coupling with Utils
+// data coupling with BaseScreenHandler
+// data coupling with PaymentScreenHandler
+// data coupling with Order
+// data coupling with OrderMedia
+// data coupling with PaymentController
+// data coupling with Invoice
+// no stampcoupling
 public class InvoiceScreenHandler extends BaseScreenHandler {
 
 	private static Logger LOGGER = Utils.getLogger(InvoiceScreenHandler.class.getName());
@@ -63,12 +72,14 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 		setInvoiceInfo();
 	}
 
+	// use invoice.getOrder().getDeliveryInfo()
 	private void setInvoiceInfo(){
 		HashMap<String, String> deliveryInfo = invoice.getOrder().getDeliveryInfo();
 		name.setText(deliveryInfo.get("name"));
 		province.setText(deliveryInfo.get("province"));
 		instructions.setText(deliveryInfo.get("instructions"));
 		address.setText(deliveryInfo.get("address"));
+		// use Utils.getCurrencyFormat
 		subtotal.setText(Utils.getCurrencyFormat(invoice.getOrder().getAmount()));
 		shippingFees.setText(Utils.getCurrencyFormat(invoice.getOrder().getShippingFees()));
 		int amount = invoice.getOrder().getAmount() + invoice.getOrder().getShippingFees();
@@ -76,6 +87,7 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 		invoice.setAmount(amount);
 		invoice.getOrder().getlstOrderMedia().forEach(orderMedia -> {
 			try {
+				// use Configs.INVOICE_MEDIA_SCREEN_PATH
 				MediaInvoiceScreenHandler mis = new MediaInvoiceScreenHandler(Configs.INVOICE_MEDIA_SCREEN_PATH);
 				mis.setOrderMedia((OrderMedia) orderMedia);
 				vboxItems.getChildren().add(mis.getContent());
@@ -88,6 +100,8 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 
 	}
 
+	// use Configs.PAYMENT_SCREEN_PATH
+	// use BaseScreenHandler
 	@FXML
 	void confirmInvoice(MouseEvent event) throws IOException {
 		BaseScreenHandler paymentScreen = new PaymentScreenHandler(this.stage, Configs.PAYMENT_SCREEN_PATH, invoice);

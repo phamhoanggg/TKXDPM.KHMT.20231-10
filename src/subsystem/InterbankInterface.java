@@ -12,6 +12,8 @@ import entity.payment.PaymentTransaction;
  * @author hieud
  * 
  */
+// no data coupling
+// no stamp coupling
 public interface InterbankInterface {
 
 	/**

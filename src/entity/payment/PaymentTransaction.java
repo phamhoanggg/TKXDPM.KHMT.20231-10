@@ -1,5 +1,7 @@
 package entity.payment;
 
+// no data coupling
+// no stamp coupling
 public class PaymentTransaction {
 	private String errorCode;
 	private CreditCard card;

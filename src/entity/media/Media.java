@@ -14,6 +14,8 @@ import utils.Utils;
  * The general media class, for another media it can be done by inheriting this class
  * @author nguyenlm
  */
+// no data coupling
+// no stamp coupling
 public class Media {
 
     private static Logger LOGGER = Utils.getLogger(Media.class.getName());

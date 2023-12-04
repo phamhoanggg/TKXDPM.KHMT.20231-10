@@ -8,7 +8,12 @@ import java.util.List;
 
 import entity.db.AIMSDB;
 
-public class Book extends Media { // Logical Cohesion ở các method get, set
+
+// no datacoupling
+// no stampcoupling
+// Logical Cohesion ở các method get, set
+public class Book extends Media {
+
 
     String author;
     String coverType;

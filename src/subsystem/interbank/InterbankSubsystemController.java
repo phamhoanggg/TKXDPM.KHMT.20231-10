@@ -16,6 +16,11 @@ import utils.Configs;
 import utils.MyMap;
 import utils.Utils;
 
+
+//datacoupling with Configs
+//datacoupling with MyMap
+//datacoupling with Utils
+//no stamp coupling 
 public class InterbankSubsystemController {
 
 	private static final String PUBLIC_KEY = "AQzdE8O/fR8=";
@@ -37,6 +42,7 @@ public class InterbankSubsystemController {
 		Map<String, Object> transaction = new MyMap();
 
 		try {
+			// use MyMap.toMyMap
 			transaction.putAll(MyMap.toMyMap(card));
 		} catch (IllegalArgumentException | IllegalAccessException e) {
 			// TODO Auto-generated catch block
@@ -45,12 +51,13 @@ public class InterbankSubsystemController {
 		transaction.put("command", PAY_COMMAND);
 		transaction.put("transactionContent", contents);
 		transaction.put("amount", amount);
+		// use Utils.getToday()
 		transaction.put("createdAt", Utils.getToday());
 
 		Map<String, Object> requestMap = new MyMap();
 		requestMap.put("version", VERSION);
 		requestMap.put("transaction", transaction);
-
+		// use Configs.PROCESS_TRANSACTION_URL
 		String responseText = interbankBoundary.query(Configs.PROCESS_TRANSACTION_URL, generateData(requestMap));
 		MyMap response = null;
 		try {
@@ -62,7 +69,7 @@ public class InterbankSubsystemController {
 
 		return makePaymentTransaction(response);
 	}
-
+	// Control couping
 	private PaymentTransaction makePaymentTransaction(MyMap response) {
 		if (response == null)
 			return null;

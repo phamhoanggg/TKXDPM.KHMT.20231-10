@@ -14,6 +14,8 @@ import java.util.Map;
  * @author hieud
  *
  */
+// no data coupling
+// no stamp coupling
 public class MyMap extends LinkedHashMap<String, Object> {
 	private static final long serialVersionUID = 1L;
 
@@ -95,6 +97,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 * @return the term as {@link java.lang.String String} 
 	 * @throws IllegalArgumentException
 	 */
+	// Control couping
 	private static String getNextTerm(String str, int idx) {
 		if (str == null || idx >= str.length() || str.charAt(idx) != '"') {
 			throw new IllegalArgumentException("Cannot resolve the input.");
@@ -128,6 +131,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 * @return the term as {@link utils.MyMap MyMap} 
 	 * @throws IllegalArgumentException
 	 */
+	// Control couping
 	public static MyMap toMyMap(String str, int idx) throws IllegalArgumentException {
 		if (str == null || str.length() < 2 || str.charAt(idx) != '{') {
 			throw new IllegalArgumentException("Cannot resolve the input.");

@@ -4,7 +4,10 @@ import entity.cart.Cart;
 import entity.cart.CartMedia;
 import entity.media.Media;
 
-public class User { // Logical Cohesion ở các method get, set
+// no data coupling
+// no stamp coupling
+ // Logical Cohesion ở các method get, set
+public class User {
     
     private int id;
     private String name;

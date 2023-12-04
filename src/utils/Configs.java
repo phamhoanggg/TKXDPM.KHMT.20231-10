@@ -6,6 +6,8 @@ import javafx.scene.text.FontWeight;
 /**
  * @author nguyenlm Contains the configs for AIMS Project
  */
+// no datacoupling
+// no stamp couoling
 public class Configs {
 
 	// api constants

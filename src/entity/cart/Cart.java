@@ -39,8 +39,8 @@ public class Cart {
     public void emptyCart(){
         lstCartMedia.clear();
     }
-
-    // use getQuantity() in class CartMedia
+  // use getQuantity() in class CartMedia
+  // Logical Cohesion
     public int getTotalMedia(){
         int total = 0;
         for (Object obj : lstCartMedia) {
@@ -49,8 +49,8 @@ public class Cart {
         }
         return total;
     }
-
-    // use getPrice and getQuantity in cartMedia
+  // use getQuantity() in class CartMedia
+  // Logical Cohesion
     public int calSubtotal(){
         int total = 0;
         for (Object obj : lstCartMedia) {

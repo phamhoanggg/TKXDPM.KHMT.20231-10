@@ -20,27 +20,27 @@ public class CartMedia {
         this.quantity = quantity;
         this.price = price;
     }
-    
+    // Logical Cohesion
     public Media getMedia() {
         return this.media;
     }
-
+    // Logical Cohesion
     public void setMedia(Media media) {
         this.media = media;
     }
-
+    // Logical Cohesion
     public int getQuantity() {
         return this.quantity;
     }
-
+    // Logical Cohesion
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
+    // Logical Cohesion
     public int getPrice() {
         return this.price;
     }
-
+    // Logical Cohesion
     public void setPrice(int price) {
         this.price = price;
     }

@@ -96,17 +96,17 @@ public class PlaceOrderController extends BaseController{
     public void validateDeliveryInfo(HashMap<String, String> info) throws InterruptedException, IOException{
     	
     }
-    
+    // Logical Cohesion
     public boolean validatePhoneNumber(String phoneNumber) {
     	// TODO: your work
     	return false;
     }
-    
+    // Logical Cohesion
     public boolean validateName(String name) {
     	// TODO: your work
     	return false;
     }
-    
+    // Logical Cohesion
     public boolean validateAddress(String address) {
     	// TODO: your work
     	return false;

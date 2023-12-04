@@ -87,11 +87,11 @@ public class CartScreenHandler extends BaseScreenHandler {
 			
 		});
 	}
-
+	// Logical Cohesion
 	public Label getLabelAmount() {
 		return labelAmount;
 	}
-
+	// Logical Cohesion
 	public Label getLabelSubtotal() {
 		return labelSubtotal;
 	}

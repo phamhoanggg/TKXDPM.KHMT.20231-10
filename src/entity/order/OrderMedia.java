@@ -2,10 +2,9 @@ package entity.order;
 
 import entity.media.Media;
 
-
 // no data coupling
 // no stamp coupling
-public class OrderMedia {
+public class OrderMedia { // Logical Cohesion ở các method get, set
     
     private Media media;
     private int price;

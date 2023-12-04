@@ -8,9 +8,12 @@ import java.util.List;
 
 import entity.db.AIMSDB;
 
+
 // no datacoupling
 // no stampcoupling
+// Logical Cohesion ở các method get, set
 public class Book extends Media {
+
 
     String author;
     String coverType;

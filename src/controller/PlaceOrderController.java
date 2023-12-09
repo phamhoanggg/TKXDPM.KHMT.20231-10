@@ -23,6 +23,7 @@ import views.screen.popup.PopupScreen;
 // datacoupling with Order
 // datacoupling with Invoice
 // stampcoupling with Order
+// not functional cohesion 
 public class PlaceOrderController extends BaseController{
 
     /**

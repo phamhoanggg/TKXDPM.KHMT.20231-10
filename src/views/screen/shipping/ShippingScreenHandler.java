@@ -30,9 +30,7 @@ import views.screen.popup.PopupScreen;
 // data coupling with BaseScreenHandler
 // data coupling with InvoiceScreenHandler
 // data coupling with PopupScreen
-
-
-
+// not functional cohesion 
 public class ShippingScreenHandler extends BaseScreenHandler implements Initializable {
 
 	@FXML

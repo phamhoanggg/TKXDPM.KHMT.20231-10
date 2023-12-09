@@ -4,6 +4,7 @@ import entity.media.Media;
 
 // no datacoupling
 // no stampcoupling 
+// functional cohesion 
 public class CartMedia {
     
     private Media media;

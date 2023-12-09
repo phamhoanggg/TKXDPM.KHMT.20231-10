@@ -8,6 +8,7 @@ import utils.Configs;
 
 // data coupling with ultis.Configs
 // no stampcoupling
+// functional cohesion 
 public class Order { // Logical Cohesion ở các method get, set
     
     private int shippingFees;

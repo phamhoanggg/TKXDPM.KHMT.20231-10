@@ -29,6 +29,7 @@ import views.screen.FXMLScreenHandler;
 //datacoupling with Cart
 //datacoupling with CartMedia
 // no stamp coupling
+// no functional conhesion
 public class MediaHandler extends FXMLScreenHandler {
 
 	// use Utils.getLogger

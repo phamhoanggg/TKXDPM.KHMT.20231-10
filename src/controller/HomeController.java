@@ -10,7 +10,7 @@ import entity.media.Media;
  * This class controls the flow of events in homescreen
  * @author nguyenlm
  */
-
+// functional cohesion
 //datacoupling with Media
 public class HomeController extends BaseController{
 

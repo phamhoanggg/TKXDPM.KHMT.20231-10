@@ -12,6 +12,7 @@ import entity.cart.CartMedia;
  * @author nguyenlm
  */
 // datacoupling with Cart
+// functional cohesion 
 public class ViewCartController extends BaseController{
     
     /**

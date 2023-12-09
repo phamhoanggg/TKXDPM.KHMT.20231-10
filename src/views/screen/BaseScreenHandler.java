@@ -12,6 +12,7 @@ import views.screen.home.HomeScreenHandler;
 
 // no datacoupling
 // no stampcoupling
+// functional cohesion 
 public class BaseScreenHandler extends FXMLScreenHandler { // Logical Cohesion ở các method get, set
 
 	private Scene scene;

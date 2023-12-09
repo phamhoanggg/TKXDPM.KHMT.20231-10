@@ -9,6 +9,7 @@ import entity.media.Media;
 
 // datacoupling with CartMedia
 // stampcoupling with Media
+// functional cohesion 
 public class Cart {
     
     private List<CartMedia> lstCartMedia;

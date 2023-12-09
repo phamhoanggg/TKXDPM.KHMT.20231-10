@@ -14,6 +14,7 @@ import entity.payment.PaymentTransaction;
  */
 // no data coupling
 // no stamp coupling
+// functional cohesion 
 public interface InterbankInterface {
 
 	/**

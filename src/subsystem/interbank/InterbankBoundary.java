@@ -5,6 +5,7 @@ import utils.API;
 
 // no data coupling
 // no stamp coupling
+// functional cohesion 
 public class InterbankBoundary {
 
 	String query(String url, String data) {

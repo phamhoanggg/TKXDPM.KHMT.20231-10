@@ -11,6 +11,7 @@ import entity.media.Media;
  * @author nguyenlm
  */
 // funcitonal cohesion
+// communicational cohesion
 public class BaseController {
     
     /**

@@ -2,6 +2,7 @@ package entity.payment;
 
 // no data coupling
 // no stamp coupling
+// functional cohesion 
 public class PaymentTransaction {
 	private String errorCode;
 	private CreditCard card;

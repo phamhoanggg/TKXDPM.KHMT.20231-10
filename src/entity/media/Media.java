@@ -16,6 +16,7 @@ import utils.Utils;
  */
 // no data coupling
 // no stamp coupling
+// functional cohesion 
 public class Media {
 
     private static Logger LOGGER = Utils.getLogger(Media.class.getName());

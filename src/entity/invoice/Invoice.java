@@ -3,6 +3,7 @@ package entity.invoice;
 import entity.order.Order;
 
 // no data coupling
+// functional cohesion 
 public class Invoice {
 
     private Order order;

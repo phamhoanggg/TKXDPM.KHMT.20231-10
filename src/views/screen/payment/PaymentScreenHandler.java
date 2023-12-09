@@ -22,7 +22,7 @@ import views.screen.popup.PopupScreen;
 // datacoupling with Configs
 // datacoupling with PaymentController
 // datacoupling with BaseScreenHandler
-
+// functional cohesion 
 public class PaymentScreenHandler extends BaseScreenHandler {
 
 	@FXML

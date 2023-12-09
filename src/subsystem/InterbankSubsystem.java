@@ -16,6 +16,7 @@ import subsystem.interbank.InterbankSubsystemController;
  */
 // data coupling with InterbankSubsystemController
 // no stamp coupling
+// functional cohesion
 public class InterbankSubsystem implements InterbankInterface {
 
 	/**

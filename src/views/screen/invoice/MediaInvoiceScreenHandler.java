@@ -16,6 +16,7 @@ import views.screen.FXMLScreenHandler;
 
 //  no data coupling 
 // no stamp coupling
+// functional cohesion 
 public class MediaInvoiceScreenHandler extends FXMLScreenHandler{
 
     @FXML

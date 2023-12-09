@@ -32,6 +32,7 @@ import views.screen.shipping.ShippingScreenHandler;
 //data coupling with BaseScreenHandler
 ////data coupling with PopupScreen
 // no stampcoupling
+// not functional conhesion 
 public class CartScreenHandler extends BaseScreenHandler {
 
 	// use Utils.getLogger

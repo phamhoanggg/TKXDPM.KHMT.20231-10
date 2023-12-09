@@ -16,6 +16,7 @@ import java.util.Map;
  */
 // no data coupling
 // no stamp coupling
+// functional cohesion
 public class MyMap extends LinkedHashMap<String, Object> {
 	private static final long serialVersionUID = 1L;
 

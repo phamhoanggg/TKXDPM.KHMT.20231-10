@@ -25,6 +25,7 @@ import subsystem.InterbankSubsystem;
 // datacoupling with InterbankInterface
 // datacoupling with InterbankSubSystem
 // datacoupling with Cart
+// functional cohesion 
 public class PaymentController extends BaseController {
 
 	/**

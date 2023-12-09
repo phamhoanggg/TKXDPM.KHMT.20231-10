@@ -2,6 +2,7 @@ package entity.shipping;
 
 // no data coupling
 // no stamp coupling
+// functional cohesion 
 public class Shipment {
     
     public void validateDeliveryInfo(){

@@ -12,6 +12,7 @@ import entity.db.AIMSDB;
 // no datacoupling
 // no stampcoupling
 // Logical Cohesion ở các method get, set
+// functional cohesion 
 public class Book extends Media {
 
 

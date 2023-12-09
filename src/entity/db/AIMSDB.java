@@ -8,6 +8,8 @@ import java.util.logging.Logger;
 import java.sql.Connection;
 import utils.*;
 
+// functional cohesion
+
 // no datacoupling
 
 public class AIMSDB {

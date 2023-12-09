@@ -21,6 +21,7 @@ import utils.Utils;
 //datacoupling with MyMap
 //datacoupling with Utils
 //no stamp coupling 
+//no functional cohesion
 public class InterbankSubsystemController {
 
 	private static final String PUBLIC_KEY = "AQzdE8O/fR8=";

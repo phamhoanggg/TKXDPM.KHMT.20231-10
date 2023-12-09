@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 
 // no data coupling
 // no stampcoupling
+// functional cohesion 
 public class FXMLScreenHandler {
 
 	protected FXMLLoader loader;

@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 
 // no data coupling
 // no stamp coupling
+// functional cohesion 
 public class SplashScreenHandler implements Initializable {
 
     @FXML

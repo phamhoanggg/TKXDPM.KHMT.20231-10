@@ -22,6 +22,7 @@ import entity.payment.PaymentTransaction;
 
 // no data coupling
 // no stamp coupling
+// functional cohesion
 public class API {
 
 	public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");

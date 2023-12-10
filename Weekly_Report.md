@@ -110,12 +110,12 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  - công việc
+  - coincidental and logical cohesion
 
 - Implementation details:
-  - Pull Request(s): pull request link
+  - Pull Request(s): https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/6
   - Specific implementation details:
-    - Chi tiết cv
+    - Tìm coincidental và logical cohesion
 
 </details>
 

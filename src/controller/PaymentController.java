@@ -51,6 +51,7 @@ public class PaymentController extends BaseController {
 	 */
 	// Control couping
 	// common coupling with payOrder
+	// procedural cohesion
 	private String getExpirationDate(String date) throws InvalidCardException {
 		String[] strs = date.split("/");
 		if (strs.length != 2) {
@@ -91,6 +92,7 @@ public class PaymentController extends BaseController {
 	 */
 
 	//common coupling with getExpirationDate
+	// procedural cohesion
 	public Map<String, String> payOrder(int amount, String contents, String cardNumber, String cardHolderName,
 			String expirationDate, String securityCode) {
 		Map<String, String> result = new Hashtable<String, String>();

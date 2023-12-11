@@ -82,12 +82,12 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  - công việc
+  - Find functional cohesion
 
 - Implementation details:
-  - Pull Request(s): pull request link
+  - Pull Request(s): [pull request link](https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/7)
   - Specific implementation details:
-    - Chi tiết cv
+    - Find out all functional cohesion in project
 
 </details>
 

@@ -10,6 +10,8 @@ import entity.media.Media;
 // datacoupling with CartMedia
 // stampcoupling with Media
 // functional cohesion 
+
+// Single Responsibility Principle
 public class Cart {
     
     private List<CartMedia> lstCartMedia;

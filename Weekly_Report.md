@@ -134,4 +134,74 @@ Weely report file of group 10
 </details>
 
 </details>
+
+<details>
+  <summary>W15: 11/12/2023~17/12/2023 </summary>
+<br>
+<details>
+<summary>Nguyễn Việt Hưng</summary>
+<br>
+
+- Assigned tasks:
+  -Stamp and Data coupling 
+
+- Implementation details:
+  - Pull Request(s): 
+  - Specific implementation details:
+    - Chi tiết cv
+
+</details>
+
+<details>
+<summary>Phạm Việt Hoàng</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm các class vi phạm nguyên tắc thiết kế S và D
+
+- Implementation details:
+  - Pull Request(s): https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/10
+  - Specific implementation details:
+    - Phát hiện vi phạm nguyên tắc thiết kế về SRP ở các file: Cart.java và Order.java
+    - Cart.java: lớp Cart phụ trách nhiệm vụ quản lý danh sách Media và cả thực hiện tính toán. Giải pháp là tách ra thêm 2 lớp CartController và CartCalculator để chịu trách nhiệm quản lý giỏ hàng và tính toán chi phí
+    - Order.java: lớp Order chịu cả trách nhiệm về tính toán chi phí đơn hàng và cả quản lí thông tin giao hàng. Giải pháp là tạo ra 2 lớp OrderCalculator phụ trách tính toán chi phí, và lớp DeliveryInformation để quản lí thông tin giao hàng.
+    - Chi tiết:
+      - ![image](https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/assets/105777915/29d9c6bf-2dcd-4caa-bdc0-69b195a7adc5)
+      - ![image](https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/assets/105777915/fc4ff561-6e8c-4a78-9314-3e45a864c9b9)
+
+
+
+</details>
+
+<details>
+<summary>Lê Văn Hùng</summary>
+<br>
+
+- Assigned tasks:
+  - control coupling
+
+- Implementation details:
+  - Pull Request(s): link pull req
+  - Specific implementation details:
+    - Chi tiết cv
+
+</details>
+
+<details>
+<summary>Vi Lô Hùng</summary>
+<br>
+
+- Assigned tasks:
+  - Common coupling
+
+- Implementation details:
+  - Pull Request(s): link pull req
+  - Specific implementation details: 
+    - Chi tiết cv
+
+</details>
+
+</details>
+
+</details>
 ---

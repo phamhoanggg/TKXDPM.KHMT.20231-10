@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 
 // no data coupling
 // no stamp coupling
+// functional cohesion
 public class CreditCard {
 	private String cardCode;
 	private String owner;

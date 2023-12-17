@@ -6,6 +6,8 @@ import entity.media.Media;
 
 // no data coupling
 // no stamp coupling
+// Logical Cohesion ở các method get, set
+// Functional cohesion
 public class User {
     
     private int id;

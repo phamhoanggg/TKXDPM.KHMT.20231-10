@@ -14,6 +14,8 @@ import entity.payment.PaymentTransaction;
  */
 // no data coupling
 // no stamp coupling
+// functional cohesion
+// The Open Closed Principle
 public interface InterbankInterface {
 
 	/**

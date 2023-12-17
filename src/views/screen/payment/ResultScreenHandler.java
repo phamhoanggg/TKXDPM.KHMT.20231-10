@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import views.screen.BaseScreenHandler;
 // no LSP violation found
 // data coupling with HomeScreenHandler
+// functional cohesion 
 public class ResultScreenHandler extends BaseScreenHandler {
 
 	private String result;

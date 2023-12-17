@@ -23,6 +23,7 @@ import views.screen.popup.PopupScreen;
 // datacoupling with Order
 // datacoupling with Invoice
 // stampcoupling with Order
+// not functional cohesion 
 public class PlaceOrderController extends BaseController{
 
     /**
@@ -51,6 +52,8 @@ public class PlaceOrderController extends BaseController{
     // use cartMedia.getPrice()
  
     // Content coupling: modify order's data
+    // Logical cohension
+    // communicational cohesion
     public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {
@@ -95,17 +98,17 @@ public class PlaceOrderController extends BaseController{
     public void validateDeliveryInfo(HashMap<String, String> info) throws InterruptedException, IOException{
     	
     }
-    
+    // Logical Cohesion
     public boolean validatePhoneNumber(String phoneNumber) {
     	// TODO: your work
     	return false;
     }
-    
+    // Logical Cohesion
     public boolean validateName(String name) {
     	// TODO: your work
     	return false;
     }
-    
+    // Logical Cohesion
     public boolean validateAddress(String address) {
     	// TODO: your work
     	return false;

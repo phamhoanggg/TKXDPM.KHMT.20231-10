@@ -7,6 +7,8 @@ import java.util.List;
 // no LSP violation found
 // no data coupling
 // no stampcoupling 
+// Logical Cohesion ở các method get, set
+// functional cohesion 
 public class DVD extends Media {
 
     String discType;

@@ -1,4 +1,6 @@
-package common.exception;;
+package common.exception;
+
+;
 
 /**
  * The AimsException wraps all unchecked exceptions You can use this
@@ -6,9 +8,10 @@ package common.exception;;
  * 
  * @author nguyenlm
  */
+// The Open Closed Principle
 public class AimsException extends RuntimeException {
 
-    public AimsException() {
+	public AimsException() {
 
 	}
 

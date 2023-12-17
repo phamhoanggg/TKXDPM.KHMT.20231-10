@@ -43,6 +43,7 @@ import views.screen.cart.CartScreenHandler;
 // datacoupling with controller.ViewCartController;
 // datacoupling with entity.cart.Cart;
 // datacoupling with entity.media.Media;
+//
 public class HomeScreenHandler extends BaseScreenHandler implements Initializable{
 
     public static Logger LOGGER = Utils.getLogger(HomeScreenHandler.class.getName());

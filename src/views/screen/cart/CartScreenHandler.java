@@ -32,6 +32,7 @@ import views.screen.shipping.ShippingScreenHandler;
 //data coupling with BaseScreenHandler
 ////data coupling with PopupScreen
 // no stampcoupling
+// not functional conhesion 
 public class CartScreenHandler extends BaseScreenHandler {
 
 	// use Utils.getLogger
@@ -87,11 +88,11 @@ public class CartScreenHandler extends BaseScreenHandler {
 			
 		});
 	}
-
+	// Logical Cohesion
 	public Label getLabelAmount() {
 		return labelAmount;
 	}
-
+	// Logical Cohesion
 	public Label getLabelSubtotal() {
 		return labelSubtotal;
 	}

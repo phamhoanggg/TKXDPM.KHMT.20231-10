@@ -8,6 +8,8 @@ import java.util.List;
 // no LSP violation found
 // no data coupling
 // no stamp coupling
+// Logical Cohesion ở các method get, set
+// functional cohesion 
 public class CD extends Media {
 
     String artist;

@@ -14,6 +14,7 @@ import views.screen.home.*;
 
 // data coupling with Configs
 // no stampcoupling
+// functional cohesion 
 public class App extends Application {
 
 	@FXML

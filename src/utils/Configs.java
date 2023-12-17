@@ -8,6 +8,7 @@ import javafx.scene.text.FontWeight;
  */
 // no datacoupling
 // no stamp couoling
+// functional cohesion 
 public class Configs {
 
 	// api constants

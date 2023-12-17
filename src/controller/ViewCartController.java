@@ -12,6 +12,8 @@ import entity.cart.CartMedia;
  * @author nguyenlm
  */
 // datacoupling with Cart
+// functional cohesion 
+// communicational cohesion
 public class ViewCartController extends BaseController{
     
     /**

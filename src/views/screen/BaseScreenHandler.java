@@ -13,6 +13,7 @@ import views.screen.home.HomeScreenHandler;
 // no datacoupling
 // no stampcoupling
 // functional cohesion 
+//The Open Closed Principle
 public class BaseScreenHandler extends FXMLScreenHandler { // Logical Cohesion ở các method get, set
 
 	private Scene scene;
@@ -52,11 +53,11 @@ public class BaseScreenHandler extends FXMLScreenHandler { // Logical Cohesion �
 		this.stage.setTitle(string);
 	}
 
-	public void setBController(BaseController bController){
+	public void setBController(BaseController bController) {
 		this.bController = bController;
 	}
 
-	public BaseController getBController(){
+	public BaseController getBController() {
 		return this.bController;
 	}
 

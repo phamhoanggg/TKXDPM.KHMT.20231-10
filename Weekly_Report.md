@@ -178,12 +178,12 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  - control coupling
+  - Tìm The Open Closed Principle
 
 - Implementation details:
-  - Pull Request(s): link pull req
+  - Pull Request(s): https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/12
   - Specific implementation details:
-    - Chi tiết cv
+    - Tìm kiếm các class có nguyên lý Open Closed
 
 </details>
 

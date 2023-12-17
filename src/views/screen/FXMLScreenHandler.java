@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 // no data coupling
 // no stampcoupling
 // functional cohesion 
+//The Open Closed Principle
 public class FXMLScreenHandler {
 
 	protected FXMLLoader loader;
@@ -31,7 +32,7 @@ public class FXMLScreenHandler {
 		return this.loader;
 	}
 
-	public void setImage(ImageView imv, String path){
+	public void setImage(ImageView imv, String path) {
 		File file = new File(path);
 		Image img = new Image(file.toURI().toString());
 		imv.setImage(img);

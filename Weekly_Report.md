@@ -192,12 +192,12 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  - Common coupling
+  - Kiểm tra vi phạm nguyên tắc thiết kế Liskov Substitution Principle
 
 - Implementation details:
-  - Pull Request(s): link pull req
+  - Pull Request(s): https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/13
   - Specific implementation details: 
-    - Chi tiết cv
+    - Tìm kiếm và kiểm tra các class có hoặc không vi phạm nguyên tắc thiết kế Liskov Substitution Principle
 
 </details>
 

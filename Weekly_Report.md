@@ -143,12 +143,18 @@ Weely report file of group 10
 <br>
 
 - Assigned tasks:
-  -Stamp and Data coupling 
+  -Tìm các class vi phạm nguyên tắc thiết kế I
 
 - Implementation details:
-  - Pull Request(s): 
+  - Pull Request(s): https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/pull/11
   - Specific implementation details:
-    - Chi tiết cv
+    - Không phát hiện việc vi phạm nguyên tắc thiết kế I
+    - Số lượng interface trong prj tương đối hạn chế, chỉ có InterbankInterface
+    - Chỉ có InterbankSubSystem implement InterbankInterface
+    - Chi tiết <img width="450" alt="image" src="https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/assets/85723850/6ab1ca57-9b15-4fe4-b874-b2a030a7aedc">
+    <img width="475" alt="image" src="https://github.com/phamhoanggg/TKXDPM.KHMT.20231-10/assets/85723850/d77e01cb-e181-478b-a727-c778106ab6cd">
+
+
 
 </details>
 

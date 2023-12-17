@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-
+// no LSP violation found
 // no data coupling
 // no stamp coupling
 public class CD extends Media {

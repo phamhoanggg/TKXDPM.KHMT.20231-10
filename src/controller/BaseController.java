@@ -22,7 +22,7 @@ public class BaseController {
     public CartMedia checkMediaInCart(Media media){
         return Cart.getCart().checkMediaInCart(media);
     }
-
+    
     /**
      * This method gets the list of items in cart
      * @return List[CartMedia]

@@ -16,6 +16,7 @@ import views.screen.BaseScreenHandler;
 
 // datacoupling with CONFIGS
 // datacoupling with BaseScreenHandler
+// no LSP violation found
 public class PopupScreen extends BaseScreenHandler{
     
 

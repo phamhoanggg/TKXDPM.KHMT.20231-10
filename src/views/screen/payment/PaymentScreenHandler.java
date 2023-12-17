@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
 import views.screen.popup.PopupScreen;
-
+// no LSP violation found
 // datacoupling with Configs
 // datacoupling with PaymentController
 // datacoupling with BaseScreenHandler

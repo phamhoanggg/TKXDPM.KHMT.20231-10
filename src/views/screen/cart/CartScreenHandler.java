@@ -25,7 +25,7 @@ import utils.Utils;
 import views.screen.BaseScreenHandler;
 import views.screen.popup.PopupScreen;
 import views.screen.shipping.ShippingScreenHandler;
-
+// no LSP violation found
 //data coupling with Configs
 //data coupling with Utils
 //data coupling with ShippingScreenHandle

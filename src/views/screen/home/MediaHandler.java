@@ -27,6 +27,7 @@ import views.screen.popup.PopupScreen;
 //datacoupling with CartMedia
 //datacoupling with Media
 // no stamp coupling
+// no LSP violation found
 public class MediaHandler extends FXMLScreenHandler{
 
     @FXML

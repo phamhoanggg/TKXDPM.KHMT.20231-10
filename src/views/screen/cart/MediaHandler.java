@@ -23,7 +23,7 @@ import javafx.scene.layout.VBox;
 import utils.Configs;
 import utils.Utils;
 import views.screen.FXMLScreenHandler;
-
+// no LSP violation found
 //datacoupling with Configs
 //datacoupling with Utils
 //datacoupling with Cart

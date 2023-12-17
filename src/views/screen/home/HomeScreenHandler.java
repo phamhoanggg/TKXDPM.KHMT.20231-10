@@ -34,7 +34,7 @@ import utils.Utils;
 import views.screen.BaseScreenHandler;
 import views.screen.cart.CartScreenHandler;
 
-
+// no LSP violation found
 // datacoupling with Configs
 // datacoupling with Utils
 // datacoupling with CartScreenHandler

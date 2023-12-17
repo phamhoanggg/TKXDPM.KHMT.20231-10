@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
-
+// no LSP violation found
 // no data coupling
 // no stampcoupling 
 // Logical Cohesion ở các method get, set

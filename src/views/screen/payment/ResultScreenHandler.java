@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import views.screen.BaseScreenHandler;
-
+// no LSP violation found
 // data coupling with HomeScreenHandler
 // functional cohesion 
 public class ResultScreenHandler extends BaseScreenHandler {

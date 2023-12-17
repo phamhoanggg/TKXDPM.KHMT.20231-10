@@ -9,7 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import views.screen.home.HomeScreenHandler;
-
+// no LSP violation found
 // no datacoupling
 // no stampcoupling
 // functional cohesion 

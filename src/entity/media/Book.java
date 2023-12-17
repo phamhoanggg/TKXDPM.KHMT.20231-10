@@ -7,8 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import entity.db.AIMSDB;
-
-
+// no LSP violation found
 // no datacoupling
 // no stampcoupling
 // Logical Cohesion ở các method get, set

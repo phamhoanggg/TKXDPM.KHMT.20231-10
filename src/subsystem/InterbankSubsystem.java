@@ -17,6 +17,8 @@ import subsystem.interbank.InterbankSubsystemController;
 // data coupling with InterbankSubsystemController
 // no stamp coupling
 // functional cohesion
+// assurance of ISP 
+
 public class InterbankSubsystem implements InterbankInterface {
 
 	/**

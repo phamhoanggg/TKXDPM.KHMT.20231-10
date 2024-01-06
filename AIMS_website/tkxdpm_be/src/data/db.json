@@ -1,0 +1,46 @@
+{
+  "ids": {
+    "User": 4,
+    "Cart": 3,
+    "Category": 4,
+    "Product": 6,
+    "Productincart": 5,
+    "Order": 4,
+    "Productinorder": 5
+  },
+  "models": {
+    "User": {
+      "1": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"admin\",\"password\":\"admin\",\"role\":\"admin\",\"additionalProp1\":{},\"id\":\"1\"}",
+      "2": "{\"fullname\":\"Hung Nguyen\",\"email\":\"hung.nv204563@gmail.com\",\"gender\":\"Nam\",\"phonenumber\":\"0910955779\",\"username\":\"customer\",\"password\":\"customer\",\"role\":\"customer\",\"id\":\"2\"}",
+      "3": "{\"fullname\":\"Hung Nguyen\",\"email\":\"hung.nv204563@gmail.com\",\"gender\":\"Nam\",\"phonenumber\":\"0915047679\",\"username\":\"customer2\",\"password\":\"customer2\",\"role\":\"customer\",\"id\":\"3\"}"
+    },
+    "Category": {
+      "1": "{\"id\":\"1\",\"cateName\":\"Truyện\",\"image\":\"https://hdq.com.vn/wp-content/uploads/2020/12/top-5-truyen-co-tich-an-tuong-nhat-doi-voi-tuoi-tho-chuyen-co-tich-tam-cam.jpg\",\"isDeleted\":true}",
+      "2": "{\"id\":\"2\",\"cateName\":\"Sách giáo khoa update\",\"image\":\"https://book.sachgiai.com/uploads/book/sach-giao-khoa-tieng-viet-1-tap-1/tieng-viet-1-tap-1-0.jpg\",\"isDeleted\":true}",
+      "3": "{\"id\":\"3\",\"cateName\":\"Đĩa âm nhạc update\",\"image\":\"https://th.bing.com/th/id/R.f62a476b46fdf456dd41bcf0559b2502?rik=mpCYxu83cJXCLg&pid=ImgRaw&r=0\",\"isDeleted\":false}"
+    },
+    "Product": {
+      "1": "{\"id\":\"1\",\"name\":\"Truyện harry porter\",\"image\":\"https://cdn.libro.fm/assets/covers/9781781107690_400.jpg\",\"idOfCategory\":\"1\",\"productDescription\":\"Truyện siêu hay\",\"productDetails\":\"Truyện siêu hay\",\"price\":50,\"countInStock\":120,\"isBestSeller\":true,\"cateName\":\"Truyện\",\"isDeleted\":true}",
+      "2": "{\"name\":\"Sách toán tập 2\",\"image\":\"https://th.bing.com/th/id/R.7ad5459ffc521ac4242a70597f907184?rik=W0KActzckLzVSw&pid=ImgRaw&r=0\",\"idOfCategory\":\"2\",\"productDescription\":\"Sản phẩm bổ ích\",\"productDetails\":\"Rất nhiều kiến thức\",\"price\":100,\"countInStock\":100,\"isBestSeller\":true,\"cateName\":\"Sách giáo khoa update\",\"isDeleted\":true,\"id\":\"2\"}",
+      "3": "{\"name\":\"Sách toán tập 3\",\"image\":\"https://sachhoc.com/image/catalog/LuyenThi/Lop1-5/Sach-giao-khoa-toan-1-canh-dieu.jpg\",\"idOfCategory\":\"2\",\"productDescription\":\"Rất bổ ích\",\"productDetails\":\"Rất bổ ích\",\"price\":120,\"countInStock\":99,\"isBestSeller\":false,\"cateName\":\"Sách giáo khoa update\",\"isDeleted\":false,\"id\":\"3\"}",
+      "4": "{\"name\":\"Truyện harry porter phần 3\",\"image\":\"https://th.bing.com/th/id/OIP.ZuiWiMYLqDFhI8m-S98BlAHaEo?rs=1&pid=ImgDetMain\",\"idOfCategory\":\"1\",\"productDescription\":\"Siêu kịch tính\",\"productDetails\":\"rất hay\",\"price\":120,\"countInStock\":98,\"isBestSeller\":false,\"cateName\":\"Truyện\",\"isDeleted\":false,\"id\":\"4\"}",
+      "5": "{\"id\":\"5\",\"name\":\"Đĩa nhạc vàng update\",\"image\":\"https://th.bing.com/th/id/OIP.yjricYTc4HuUj364CNTjswAAAA?rs=1&pid=ImgDetMain\",\"idOfCategory\":\"3\",\"productDescription\":\"Sản phẩm siêu hay\",\"productDetails\":\"Nghe rất êm tai\",\"price\":102,\"countInStock\":100,\"isBestSeller\":true,\"cateName\":\"Đĩa âm nhạc update\",\"isDeleted\":false}"
+    },
+    "Cart": {
+      "1": "{\"totalPrice\":0,\"idOfUser\":\"2\",\"id\":\"1\"}",
+      "2": "{\"totalPrice\":0,\"idOfUser\":\"3\",\"id\":\"2\"}"
+    },
+    "Order": {
+      "1": "{\"idOfUser\":\"2\",\"shippingAddress\":\"Thanh Thủy\",\"paymentMethod\":\"Thanh toán qua VNPay\",\"shippingPrice\":47.5,\"totalPrice\":147.5,\"isAccepted\":false,\"id\":\"1\"}",
+      "2": "{\"idOfUser\":\"2\",\"shippingAddress\":\"Thanh Thủy\",\"paymentMethod\":\"cash\",\"shippingPrice\":0,\"totalPrice\":300,\"isAccepted\":false,\"id\":\"2\"}",
+      "3": "{\"idOfUser\":\"3\",\"shippingAddress\":\"Khu phố, thị trấn Thanh Thủy\",\"paymentMethod\":\"Thanh toán qua VNPay\",\"shippingPrice\":20,\"totalPrice\":240,\"isAccepted\":false,\"id\":\"3\"}"
+    },
+    "Productincart": {},
+    "Productinorder": {
+      "1": "{\"idOfOrder\":\"1\",\"idOfProduct\":\"1\",\"quantity\":2,\"isAccepted\":false,\"id\":\"1\"}",
+      "2": "{\"idOfOrder\":\"2\",\"idOfProduct\":\"2\",\"quantity\":3,\"isAccepted\":false,\"id\":\"2\"}",
+      "3": "{\"idOfOrder\":\"3\",\"idOfProduct\":\"2\",\"quantity\":1,\"isAccepted\":false,\"id\":\"3\"}",
+      "4": "{\"idOfOrder\":\"3\",\"idOfProduct\":\"3\",\"quantity\":1,\"isAccepted\":false,\"id\":\"4\"}"
+    }
+  }
+}

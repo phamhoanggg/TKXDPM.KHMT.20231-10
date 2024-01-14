@@ -4,7 +4,7 @@ import AddButton from "../Buttons/addButton";
 import CheckButton from "../Buttons/checkButton";
 import {AddContext} from "../../../App"
 
-export default function Card({mediaList,state,setState,keyword}) {
+export default function MediaListView({mediaList,state,setState,keyword}) {
     const navigate=useNavigate();
     const { cartItems }= useContext(AddContext);
     const [pre, setPre] = useState(true);

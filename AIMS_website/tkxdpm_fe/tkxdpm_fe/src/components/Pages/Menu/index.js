@@ -1,4 +1,4 @@
-import Card from "../../Contents/Cards/card";
+import MediaListView from "../../Contents/Cards/card";
 import SelectCard from "../../Contents/ExampleCard/SelectCard";
 import Footer from "../../Footer";
 import Header from "../../Header";
@@ -15,7 +15,7 @@ export default function Menu({mediaList,cateList}) {
       <>
         <Header></Header>
         <SelectCard cateList={cateList} state={state} setState={setState}/>
-        <Card mediaList={mediaList} state={state} setState={setState} keyword={''}/>
+        <MediaListView mediaList={mediaList} state={state} setState={setState} keyword={''}/>
         <Footer/>
       </>
     )

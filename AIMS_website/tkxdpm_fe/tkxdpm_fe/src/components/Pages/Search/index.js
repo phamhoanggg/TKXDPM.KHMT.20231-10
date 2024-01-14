@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from "../../Footer";
 import Header from "../../Header";
-import Card from "../../Contents/Cards/card";
+import MediaListView from "../../Contents/Cards/card";
 import search from '../../../images/search.png'
 import {useState,useEffect} from 'react';
 import mediaService from "../../../api/mediaApi";
@@ -72,7 +72,7 @@ export default function Search({categories}){
                 </div>
             </div>
 
-            <Card mediaList={medialist} state={state} setState={setState} keyword={keyword.trim().toLowerCase()}/>
+            <MediaListView mediaList={medialist} state={state} setState={setState} keyword={keyword.trim().toLowerCase()}/>
 
             <Footer />
         </>

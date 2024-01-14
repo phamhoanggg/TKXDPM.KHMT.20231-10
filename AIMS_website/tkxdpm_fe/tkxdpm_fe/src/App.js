@@ -15,7 +15,7 @@ import Info from './components/Pages/Info/info';
 import ProtectRoutes from './ProtectRoutes';
 import ProtectRoutesUser from './ProtectRoutesUser';
 import getCart from './api/cartApi';
-import getDish, { getCate } from './api/dishApi';
+import mediaService from './api/mediaApi';
 import ErrorPage from './components/Pages/404 Page/errorPage';
 import Forgetpass from './components/Pages/Forget Pass/forgetPass';
 import Sendsuccess from './components/Pages/Forget Pass/sendSuccess';
@@ -25,6 +25,8 @@ import Invoice from './components/Pages/Invoice/invoice';
 import Search from './components/Pages/Search';
 import ReturnPage from './components/Pages/Return/returnPage';
 import ReturnPageCash from './components/Pages/Return/returnPageCash';
+
+const mediaServiceInstance = new mediaService();
 
 export const AddContext = createContext();
 function App() {
@@ -37,8 +39,8 @@ function App() {
   useEffect(() => {
     // call api
     (async () => {
-      const mediaList = await getDish();
-      const cate = await getCate();
+      const mediaList = await mediaServiceInstance.getAllMedia();
+      const cate = await mediaServiceInstance.getCate();
       setMediaListReal (mediaList.filter (media => !media.isDeleted))
       setCateList (cate);
       const res = await getCart()

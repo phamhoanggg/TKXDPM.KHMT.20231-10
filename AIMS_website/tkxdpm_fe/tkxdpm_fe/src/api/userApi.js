@@ -50,23 +50,4 @@ export const userInfo = async () => {
   }
 };
 
-export const updateInfo = async (formValue, token) => {
-  if (formValue.name === "") {
-    return;
-  }
-
-  try {
-    // make axios post request
-    const res = await axios({
-      method: "patch",
-      url: "http://localhost:5000/api/user/update",
-      data: formValue,
-      headers: { authorization: token },
-    });
-    return res.data;
-  } catch (error) {
-    return error.response.data;
-  }
-};
-
 export default register;

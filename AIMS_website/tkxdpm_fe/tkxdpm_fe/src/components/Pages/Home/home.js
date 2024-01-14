@@ -4,7 +4,7 @@ import Card from "../../Contents//Cards/card";
 import Footer from "../../Footer/";
 import Header from "../../Header";
 import {useState,useEffect} from 'react'
-import getDish from "../../../api/dishApi";
+import getDish from "../../../api/mediaApi";
 
 //
 

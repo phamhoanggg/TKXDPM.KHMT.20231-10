@@ -4,8 +4,10 @@ import Header from "../../Header";
 import Card from "../../Contents/Cards/card";
 import search from '../../../images/search.png'
 import {useState,useEffect} from 'react';
-import getDish from "../../../api/dishApi";
+import mediaService from "../../../api/mediaApi";
 import SelectCategory from "../../Contents/Select/selectCategory";
+
+const mediaServiceInstance = new mediaService();
 
 export default function Search({categories}){
     const [state, setState] = useState('');
@@ -26,10 +28,9 @@ export default function Search({categories}){
         setKeyword(keywordInput);
     }
     useEffect(()=>{
-   
       // call api
       (async () => {
-        const res = await getDish();
+        const res = await mediaServiceInstance.getAllMedia();
         setMediaList(res);
       })()
     },[])

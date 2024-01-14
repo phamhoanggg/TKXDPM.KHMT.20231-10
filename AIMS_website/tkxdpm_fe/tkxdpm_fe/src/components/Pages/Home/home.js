@@ -1,6 +1,6 @@
 import Slider from "../../Contents/Slider/slider";
 import Category from "../../Contents/ExampleCard/examCard";
-import Card from "../../Contents//Cards/card";
+import MediaListView from "../../Contents//Cards/card";
 import Footer from "../../Footer/";
 import Header from "../../Header";
 import {useState,useEffect} from 'react'
@@ -16,7 +16,7 @@ export default function Home({mediaList, cateList}) {
     <Header/>
      <Slider></Slider>
      <Category categories={cateList}></Category>
-     <Card mediaList={mediaList} state={state} keyword={''}></Card>
+     <MediaListView mediaList={mediaList} state={state} keyword={''}/>
     
 
     <Footer/>

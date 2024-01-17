@@ -4,10 +4,10 @@ import Header from "../../Header";
 import MediaListView from "../../Contents/Cards/card";
 import search from '../../../images/search.png'
 import {useState,useEffect} from 'react';
-import mediaService from "../../../api/mediaApi";
+import productService from "../../../api/mediaApi";
 import SelectCategory from "../../Contents/Select/selectCategory";
 
-const mediaServiceInstance = new mediaService();
+const productServiceInstance = new productService();
 
 export default function Search({categories}){
     const [state, setState] = useState('');
@@ -30,7 +30,7 @@ export default function Search({categories}){
     useEffect(()=>{
       // call api
       (async () => {
-        const res = await mediaServiceInstance.getAllMedia();
+        const res = await productServiceInstance.getAllProducts();
         setMediaList(res);
       })()
     },[])

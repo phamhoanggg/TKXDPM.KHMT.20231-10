@@ -1,7 +1,7 @@
 import axios from '../setup/CustomAxios';
 
-export default class mediaService{
-  async getAllMedia(){
+export default class productService{
+  async getAllProducts(){
     try {
       // make axios post request
       const res = await axios.get ('/products')

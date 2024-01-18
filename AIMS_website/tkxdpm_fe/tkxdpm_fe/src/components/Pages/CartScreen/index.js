@@ -171,9 +171,14 @@ export default function Cart({ onRemove }) {
   }
   const increaseProduct=(cart)=>{
     setCount(!count);
-    cart.quantity = cart.quantity + 1;
-    updateCart(cart.id, cart.quantity);
-    calculateShippingFee();
+    if(cart.quantity + 1 <= cart.countInStock){
+      cart.quantity = cart.quantity + 1;
+      updateCart(cart.id, cart.quantity);
+      calculateShippingFee();
+    }
+    else {
+      handleNotify('danger','Thông báo','Số lượng sản phẩm trong kho không đủ')
+    }
   }
   const reduceProduct =(cart) =>{
     setCount(!count);

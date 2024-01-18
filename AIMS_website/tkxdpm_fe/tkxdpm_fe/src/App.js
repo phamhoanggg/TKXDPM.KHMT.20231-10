@@ -39,7 +39,7 @@ function App() {
   useEffect(() => {
     // call api
     (async () => {
-      const mediaList = await productServiceInstance.getAllMedia();
+      const mediaList = await productServiceInstance.getAllProducts();
       const cate = await productServiceInstance.getCate();
       setMediaListReal (mediaList.filter (media => !media.isDeleted))
       setCateList (cate);

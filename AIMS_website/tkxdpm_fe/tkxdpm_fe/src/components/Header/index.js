@@ -20,6 +20,8 @@ import { userInfo } from "../../api/userApi";
 import ErrorBoundary from "./Errorhandle";
 import Cartlength from "./Cartlength";
 import Error from "../../error";
+import { navigateOrder } from "../Pages/ListOrders";
+import { viewCart } from "../Pages/CartScreen";
 
 const solutions = [
   {
@@ -66,7 +68,6 @@ export default function Header() {
     text1 = "Wellcome";
     log2 = name;
   }
-
   return (
     <Popover className="relative bg-white z-10 ">
       <div className="mx-auto px-4 sm:px-6 fixed top-0 right-0 left-0 bg-white z-10">
@@ -129,9 +130,7 @@ export default function Header() {
             </div>
             <div
               className="cursor-pointer text-lg font-medium text-gray-500 hover:text-gray-900"
-              onClick={() => {
-                navigate("/ListOrdersUser");
-              }}
+              onClick={() => navigateOrder(navigate)}
             >
               Đơn hàng
             </div>
@@ -150,9 +149,7 @@ export default function Header() {
             <ErrorBoundary fallback={<Error haveResetButton={false} />}>
               <div
                 className="cursor-pointer whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700"
-                onClick={() => {
-                  navigate("/Cart");
-                }}
+                onClick={() => viewCart(navigate)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

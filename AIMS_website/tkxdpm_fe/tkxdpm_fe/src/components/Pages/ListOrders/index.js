@@ -1,44 +1,63 @@
 import Footer from "../../Footer";
 import Header from "../../Header";
-import { getUserOrders } from "../../../api/orderApi";
 import { useEffect, useState } from "react";
+import OrderApi from "../../../api/orderApi";
+import ModalViewOrder from "../../ModalViewOrder";
+import axios from '../../../setup/CustomAxios'
 
+export function navigateOrder(navigate) {
+  navigate("/ListOrdersUser");
+}
 function ProductItem({ product }) {
   return (
-    <ul role="list" className="divide-y divide-gray-100">
-      <li className="flex justify-between gap-x-6 py-5">
-        <div className="flex min-w-0 gap-x-4">
-          <img
-            className="h-12 w-12 flex-none rounded-full bg-gray-50"
-            src={product.image}
-            alt=""
-          />
-          <div className="min-w-0 flex-auto">
-            <p className="text-sm font-semibold leading-6 text-gray-900">
-              {product.name}
-            </p>
-            <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-              {`Số lượng: ${product.quantity}`}
+    <div>
+      <ul className="divide-y divide-gray-100">
+        <li className="flex justify-between gap-x-6 py-5">
+          <div className="flex min-w-0 gap-x-4">
+            <img
+              className="h-12 w-12 flex-none rounded-full bg-gray-50"
+              src={product.image}
+              alt=""
+            />
+            <div className="min-w-0 flex-auto">
+              <p className="text-sm font-semibold leading-6 text-gray-900">
+                {product.name}
+              </p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                {`Số lượng: ${product.quantity}`}
+              </p>
+            </div>
+          </div>
+          <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+            <p className="text-sm leading-6 text-gray-900">{`Thể loại: ${product.cateName}`}</p>
+            <p className="mt-1 text-xs leading-5 text-gray-500">
+              {`Tổng: ${product.totalPrice}.000 VNĐ`}
             </p>
           </div>
-        </div>
-        <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p className="text-sm leading-6 text-gray-900">{`Thể loại: ${product.cateName}`}</p>
-          <p className="mt-1 text-xs leading-5 text-gray-500">
-            {`Tổng: ${product.totalPrice}.000 VNĐ`}
-          </p>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   );
 }
 const ItemUser = ({ item, index }) => {
+  const [showModal, setShowModal] = useState(false);
+  const viewOrder = () => {
+    setShowModal(true);
+  };
   return (
     <div>
-      <div className="px-4 py-1 ">
-        <h3 className="leading-7 text-gray-900 font-bold text-xl">
-          {`# ${index}`}
-        </h3>
+      <div className="flex justify-between">
+        <div className="px-4 py-1 bg-red-300 w-fit">
+          <h3 className="leading-7 text-gray-900 font-bold text-xl">
+            {`# ${index}`}
+          </h3>
+        </div>
+        <button
+          onClick={() => viewOrder()}
+          className="focus:outline-black text-white text-sm py-2.5 px-4 border-b-4 border-green-600 bg-green-500 hover:bg-green-400"
+        >
+          Xem chi tiết
+        </button>
       </div>
       <div className=" border-t border-gray-100">
         <dl className="divide-y divide-gray-100">
@@ -46,38 +65,8 @@ const ItemUser = ({ item, index }) => {
             <dt className="text-sm font-medium leading-6 text-gray-900">
               Trạng thái
             </dt>
-            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+            <dd className="mt-1 text-lg  leading-6 text-red-400 sm:col-span-2 sm:mt-0">
               {item.isAccepted ? "Đã được duyệt" : "Chưa được duyệt"}
-            </dd>
-          </div>
-          <div className="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
-              Địa chỉ
-            </dt>
-            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {item.shippingAddress}
-            </dd>
-          </div>
-          <div className="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
-              Hình thức thanh toán
-            </dt>
-            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {item.paymentMethod}
-            </dd>
-          </div>
-          <div className="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
-              Phí vận chuyển
-            </dt>
-            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {`${item.shippingPrice}.000 VNĐ`}
-            </dd>
-          </div>
-          <div className="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">Giá</dt>
-            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {item.totalPrice}.000 VNĐ
             </dd>
           </div>
           <div className="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -90,19 +79,26 @@ const ItemUser = ({ item, index }) => {
               ))}
             </dd>
           </div>
+          <div className="px-4 py-2 mb-14 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="text-sm font-medium leading-6 text-gray-900">Giá</dt>
+            <dd className="mt-1 text-lg  leading-6 text-red-400 sm:col-span-2 sm:mt-0">
+              {item.totalPrice}.000 VNĐ
+            </dd>
+          </div>
         </dl>
       </div>
+      {showModal && <ModalViewOrder setShow={setShowModal} item={item} />}
     </div>
   );
 };
 const ListOrdersUser = () => {
   const [data, setData] = useState([]);
+  const orderApi = new OrderApi();
   useEffect(() => {
     const fetch = async () => {
       try {
-        const data = await getUserOrders();
+        const data = await axios.get("users/orders");
         setData(data);
-        console.log(data);
       } catch (error) {
         console.log(error);
       }
@@ -114,11 +110,16 @@ const ListOrdersUser = () => {
       <Header />
       <main>
         <div>
-          <div className="max-w-screen-xl px-4 mx-auto md:px-8 pt-32">
+          <div className="max-w-screen-xl px-4 mx-auto md:w-1/2 pt-32">
             <div className="mt-4">
               {data.map((order, index) => (
                 <ItemUser key={index} item={order} index={index + 1} />
               ))}
+              {data.length === 0 && (
+                <div className="h-96 flex items-center justify-center">
+                  <h2 className="font-bold text-2xl">Đơn hàng đang trống</h2>
+                </div>
+              )}
             </div>
           </div>
         </div>
